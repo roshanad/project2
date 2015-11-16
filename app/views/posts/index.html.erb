@@ -1,5 +1,5 @@
 <% @posts.each do |post| %>
 <div>
   <h2><%= link_to post.title, post %></h2>
-  <p><%= post.created_at.strftime("%B, %d, %Y") %>
+  <p><%= post.created_at.strftime("%B, %d, %Y") %></p>
 <% end %>
