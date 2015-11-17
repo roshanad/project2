@@ -11,14 +11,15 @@
   <body>
   <div id ="main_content">
     <div id="header">
-      <p>All Posts</p><button class="buttons"><%= link_to "New Post", new_post_path %></button>
-      <button class="button"> Log in</button>
-      <button class="button"> Log Out</button>
+      <button class="button"><%= link_to "All Post", posts_path %></button>
+      <% if current_user %>
+      <button class="buttons"><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3>
+    <% else %>
+      <button class="buttons"><%= link_to 'Signup', new_user_registration_path %></button>
+      <button><%= link_to 'Login', new_user_session_path %></button>
+    <% end %>
     </div>
   </div>
-  <% flash.each do |name, msg| %>
-  <%= content_tag(:div, msg, class: "alert") %>
-  <% end %>
   <%= yield %>
   </body>
   </html>
