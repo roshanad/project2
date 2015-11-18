@@ -1,25 +1,34 @@
   <!DOCTYPE html>
   <html>
   <head>
-    <title>Project2</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <title>Nepal - America Portal</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
+    <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Lato' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
 
   </head>
   <body>
-  <div id ="main_content">
-    <div id="header">
-      <button class="button"><%= link_to "All Post", posts_path %></button>
-      <% if current_user %>
-      <button class="buttons"><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3>
-    <% else %>
-      <button class="buttons"><%= link_to 'Signup', new_user_registration_path %></button>
-      <button><%= link_to 'Login', new_user_session_path %></button>
-    <% end %>
+
+    <header class="main_header clearfix">
+      <div class = "wrapper">
+        <p id="logo">NEPALESE COMMUNITY NEWS</p>
+        <button class="buttons"><%= link_to "All Post", posts_path %></button>
+        <% if current_user %>
+        <button class="buttons"><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3>
+      <% else %>
+        <button class="buttons"><%= link_to 'Signup', new_user_registration_path %></button>
+        <button><%= link_to 'Login', new_user_session_path %></button>
+      <% end %>
     </div>
-  </div>
+  </header>
+  <div class = "wrapper">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+</div>
+<div class = "wrapper">
   <%= yield %>
+</div>
   </body>
   </html>

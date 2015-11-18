@@ -1,5 +1,9 @@
-<% @posts.each do |post| %>
-<div>
-  <h2><%= link_to post.title, post %></h2>
-  <p><%= post.created_at.strftime("%B, %d, %Y") %></p>
-<% end %>
+<p class= "listing"><%= link_to "+ Click Here to Add New Listing +", new_post_path() %></p>
+<div id="posts">
+  <% @posts.each do |post| %>
+  <div class="post">
+    <h2 class="title"><%= link_to post.title, post %></h2>
+    <p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+  </div>
+  <% end %>
+</div>
