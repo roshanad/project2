@@ -1,17 +1,17 @@
-<div id="posts">
-  <% @posts.each do |post| %>
-  <div class="post">
-    <h2 class="title"><%= link_to post.title, post %></h2>
-    <p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
-
-  </div>
+<button class="new"> <%= link_to "Add Listing", new_post_path %></button>
+<div id="category">
+  <div id = "categorycol">
+  <% @categories.each do |category| %>
+    <ul>
+      <li><%= link_to category.name, posts_path(filter: {category_id: category}) %></div>
+    </ul>
   <% end %>
 </div>
-<div id="category">
-<% @categories.each do |category| %>
-<ul>
-  <li><%= link_to category.name, posts_path(filter: {category_id: category}) %></li>
-</ul>
-</div>
-<% end %>
+<div id="posts">
+  <% @posts.each do |post| %>
+    <div class="post">
+      <h2 class="title"><%= link_to post.title, post %></h2>
+      <p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+    </div>
+  <% end %>
 </div>

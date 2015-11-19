@@ -1,25 +1,25 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any styles
+* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+* file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 
- @import 'normalize';
+@import 'normalize';
 
- html, body {
-   font-family: 'Raleway', sans-serif;
-   background: #EDEFF0;
- }
+html, body {
+  font-family: 'Raleway', sans-serif;
+  background: #EDEFF0;
+}
 
 h1, h2, h3, h4, h5 {
   color: #373377;
@@ -95,66 +95,109 @@ h1, h2, h3, h4, h5 {
   height: 20px;
 }
 #comment_body {
-    width: 500px;
-    height: 150px;
+  width: 500px;
+  height: 150px;
 }
 
 #listing{
-    background-color: orange;
-  }
+  background-color: orange;
+}
 
 #posts {
+  margin: auto;
+  width: 600px;
   .post {
     border-bottom: 1px dotted #D1d1d1;
-        .title{
-          a{
-            text-decoration: none;
-            color:#376589;
-          }
-          a:hover{
-            text-decoration: none;
-            color: blue;
-
-          }
-          color: #378989;
-          text-decoration: none;
-          font-size: 18px;
-          }
-        .date{
-          color: #B2BAC2;
-          font-size: 14px;
-
-          }
-        }
+    .title{
+      a{
+        text-decoration: none;
+        color:#376589;
       }
+      a:hover{
+        text-decoration: none;
+        color: blue;
+
+      }
+      color: #378989;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .date{
+      color: #B2BAC2;
+      font-size: 14px;
+    }
+  }
+}
+#category {
+
+  #categorycol {
+    a{
+      text-decoration: none;
+      color:#376589;
+    }
+    a:hover{
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  ul {
+    list-style: none;
+
+  li{
+    display: inline;
+    float: left;
+    padding-right: 20px;
+  }
+}
+border-bottom: 1px dotted #D1d1d1;
+
+}
+
 #comments {
 
   .comment {
     border-bottom: 1px dotted #D1d1d1;
-      .title {
-        color: #378989;
-        text-decoration: none;
-        font-size: 18px;
-      }
+    .title {
+      color: #378989;
+      text-decoration: none;
+      font-size: 18px;
+    }
   }
 
   #posts_show {
     .post {
       border-bottom: 1px dotted #D1d1d1;
-          .title{
-            color: #378989;
-            text-decoration: none;
-            font-size: 18px;
-            }
-            .date {
-              color: #B2BAC2;
-              font-size: 14px;
-            }
-            .body{
-              color: #378989;
-              text-decoration: none;
-              font-size: 18px;
-            }
-          }
-        }
+      .title{
+        color: #378989;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      .date {
+        color: #B2BAC2;
+        font-size: 14px;
+      }
+      .body{
+        color: #378989;
+        text-decoration: none;
+        font-size: 18px;
+      }
+    }
+  }
+}
+.new {
+  display: inline-block;
+  margin-left: 250px;
+  text-align: center;
+  width: 170px;
+  padding: 10px;
+  color: #378989;
+  background: white;
+  border: 1px solid red;
+  border-radius: 5px;
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    color: #D1d1d1;
+  }
 }
