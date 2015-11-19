@@ -5,7 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-first = Post.create(title: "The Internet: An Opportunity for Sustainable Development", body: "The greatest challenge facing the world today is the need to achieve sustainable development--development that will bring economic and social progress to all without harming the future of our planet.")
-second = Post.create(title: "Making the Case for a Local Version of the U.S. Digital Service in California", body: "A California version of the highly acclaimed U.S. Digital Service just took a big leap forward. In its recently released report, the Little Hoover Commission has called on elected officials in Sacramento to create a local version of the federal program in the form of a new California Digital Service.")
-third = Post.create(title: "Social Media and Children's Rights In the Global Village", body: "In an age where social media is, for many, the predominant form of news, expression and assembly, allowing any country or any government agencies within a country to ban it is a violation of children's rights.")
-fourth = Post.create(title: "Disrupting Today's Healthcare System", body: "Healthcare today is reactive, retrospective, bureaucratic and expensive. It's sick care, not healthcare.")
+first = Post.create!(title: "Protest - Protest against Blockade - Washington DC", body: "Please come to Lafayette Park, in Front of White House to protest and show solidarity for the Unofficial Blockade by India. Please come with Nepalese Flag, Men wear Neapli Hat & wear Daura Surawal if can. If anybody wants to wear their Ethnic Dresses and costumes to show the diversity of Nepalese culture & her People, PLEASE Do SO.. If you are coming as a group and want to show which City State or Association you represent, Please bring Banners!! Organized by All Associations in Northern America and any or all Social,Cultural & Language Groups.")
+second = Post.create!(title: "Looking for an apartment", body: "Hi i have single bed room available for single person near kohls shopping centre.if you are intrested you can email me at a@abc.com thank you. ")
+third = Post.create!(title: "Experienced Waiter needed", body: "One of the best Indian Restaurant in North Florida seeking an experienced waiter. Great weather, great accommodation and appealing city of Jacksonville is a great place to stay and work. Pay is competitive and other folks working at the restaurant are Nepali as well. Opportunity to grow within the company. Please contact. Phone no: 904123456")
+fourth = Post.create!(title: "HIRING IMMEDIATELY", body: "Subway Of Allston is hiring full time and part-time sandwich artists. Experience not necessary. Looking for friendly and outgoing personality!!!
+Phone no: 6121234321")
+
+Category.create!(name: "Events")
+Category.create!(name: "Roomate")
+Category.create!(name: "Classified")

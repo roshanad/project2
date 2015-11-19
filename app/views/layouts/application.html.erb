@@ -1,7 +1,7 @@
   <!DOCTYPE html>
   <html>
   <head>
-    <title>Nepal - America Portal</title>
+    <title>Message Board for Nepalese Community</title>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Lato' %>
@@ -13,14 +13,15 @@
 
     <header class="main_header clearfix">
       <div class = "wrapper">
-        <p id="logo">NEPALESE COMMUNITY NEWS</p>
-        <button class="buttons"><%= link_to "All Post", posts_path %></button>
-        <% if current_user %>
-        <button class="buttons"><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3>
-      <% else %>
-        <button class="buttons"><%= link_to 'Signup', new_user_registration_path %></button>
-        <button><%= link_to 'Login', new_user_session_path %></button>
-      <% end %>
+        <p id="logo">NEPALESE COMMUNITY MESSAGE BOARD</p>
+        <p class="links"><%= link_to "Message Board", posts_path %></p>
+        <p class="links"><%= link_to 'Signup', new_user_registration_path %> | </p>
+        <% if user_signed_in? %>
+        <p class= "links"><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></p>
+        <p class="links"><%= link_to 'Create a Message', new_post_path %> | </p>
+        <% else %>
+        <p class="links"><%= link_to 'Login', new_user_session_path %> | </p>
+        <% end %>
     </div>
   </header>
   <div class = "wrapper">

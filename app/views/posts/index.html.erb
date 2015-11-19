@@ -1,9 +1,17 @@
-<p class= "listing"><%= link_to "+ Click Here to Add New Listing +", new_post_path() %></p>
 <div id="posts">
   <% @posts.each do |post| %>
   <div class="post">
     <h2 class="title"><%= link_to post.title, post %></h2>
     <p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+
   </div>
   <% end %>
+</div>
+<div id="category">
+<% @categories.each do |category| %>
+<ul>
+  <li><%= link_to category.name, posts_path(filter: {category_id: category}) %></li>
+</ul>
+</div>
+<% end %>
 </div>

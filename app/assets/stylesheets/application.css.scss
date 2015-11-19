@@ -68,22 +68,36 @@ h1, h2, h3, h4, h5 {
   }
   .wrapper {
 
-    .buttons{
-      float:right;
-      background-color: #376589;
-      padding-left: 20px;
-      text-transform: capitalize;
-      width: 100px;
-      border-radius: 5px;;
-
+    .links{
+      display: inline;
+      float: right;
+      padding: 5px;
+      font-size: 20px;
+      margin-top: 5px;
       a{
         text-decoration: none;
-        color: white;
+        color: blue;
       }
     }
   }
 }
+#post_title {
+  width: 500px;
+  height: 20px;
+}
 
+#post_body{
+  width: 500px;
+  height: 150px;
+}
+#comment_name {
+  width: 500px;
+  height: 20px;
+}
+#comment_body {
+    width: 500px;
+    height: 150px;
+}
 
 #listing{
     background-color: orange;
@@ -91,7 +105,7 @@ h1, h2, h3, h4, h5 {
 
 #posts {
   .post {
-    border-bottom: 1px solid #D1d1d1;
+    border-bottom: 1px dotted #D1d1d1;
         .title{
           a{
             text-decoration: none;
@@ -113,3 +127,34 @@ h1, h2, h3, h4, h5 {
           }
         }
       }
+#comments {
+
+  .comment {
+    border-bottom: 1px dotted #D1d1d1;
+      .title {
+        color: #378989;
+        text-decoration: none;
+        font-size: 18px;
+      }
+  }
+
+  #posts_show {
+    .post {
+      border-bottom: 1px dotted #D1d1d1;
+          .title{
+            color: #378989;
+            text-decoration: none;
+            font-size: 18px;
+            }
+            .date {
+              color: #B2BAC2;
+              font-size: 14px;
+            }
+            .body{
+              color: #378989;
+              text-decoration: none;
+              font-size: 18px;
+            }
+          }
+        }
+}
