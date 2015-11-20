@@ -16,6 +16,21 @@
 
 @import 'normalize';
 
+body.welcome
+{
+  height: 1200px;
+  background-image: asset-url("nepal.jpg");
+  background-size: cover;
+  .main {
+    background-color: white;
+    margin-top: 90px;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0.8;
+  }
+}
+
+
 html, body {
   font-family: 'Raleway', sans-serif;
   background: #EDEFF0;
@@ -67,19 +82,20 @@ h1, h2, h3, h4, h5 {
     }
   }
   .wrapper {
-
-    .links{
-      display: inline;
+    .navbar {
       float: right;
-      padding: 5px;
-      font-size: 20px;
-      margin-top: 5px;
+    .links{
+      text-transform: uppercase;
+      float: left;
+      margin: 10px;
+      font-size: 1.2rem;
       a{
         text-decoration: none;
         color: blue;
       }
     }
   }
+}
 }
 #post_title {
   width: 500px;

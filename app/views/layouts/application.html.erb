@@ -5,23 +5,25 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
   <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Lato' %>
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
 </head>
 <body>
-
   <header class="main_header clearfix">
     <div class = "wrapper">
       <p id="logo">COMMUNITY MESSAGE BOARD</p>
+        <div class="navbar">
       <p class="links"><%= link_to "Message Board", posts_path %></p>
-      <p class="links"><%= link_to 'Signup', new_user_registration_path %> | </p>
+      <p class="links"><%= link_to 'Signup', new_user_registration_path %>  </p>
       <% if user_signed_in? %>
       <p class= "links"><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></p>
-      <p class="links"><%= link_to 'Create a Message', new_post_path %> | </p>
+      <p class="links"><%= link_to 'Create a Message', new_post_path %>  </p>
       <% else %>
-      <p class="links"><%= link_to 'Login', new_user_session_path %> | </p>
+      <p class="links"><%= link_to 'Login', new_user_session_path %> </p>
       <% end %>
+    </div>
     </div>
   </header>
   <div class = "wrapper">
