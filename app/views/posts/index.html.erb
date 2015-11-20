@@ -1,10 +1,7 @@
 <button class="new"> <%= link_to "Add Listing", new_post_path %></button>
 <div id="category">
-  <div id = "categorycol">
   <% @categories.each do |category| %>
-    <ul>
-      <li><%= link_to category.name, posts_path(filter: {category_id: category}) %></div>
-    </ul>
+      <p id = "categorycol"><%= link_to category.name, posts_path(filter: {category_id: category}) %></p>
   <% end %>
 </div>
 <div id="posts">
@@ -12,6 +9,8 @@
     <div class="post">
       <h2 class="title"><%= link_to post.title, post %></h2>
       <p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+      <p class = "body"><%=post.body.truncate_words(20)%></p>
+      <p class = "details"><%=link_to 'More Details', post%></p>
     </div>
   <% end %>
 </div>
