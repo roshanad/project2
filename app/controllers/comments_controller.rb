@@ -13,3 +13,4 @@ class CommentsController < ApplicationController
 		redirect_to post_path(@post)
 	end
 end
+# ERICA: So efficient! (You could use the before_action from my note in the posts controller here, too...)

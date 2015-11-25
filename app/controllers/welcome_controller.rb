@@ -3,3 +3,4 @@ class WelcomeController < ApplicationController
 
   end
 end
+# ERICA: If you're not using a file, delete it before pushing to production!
