@@ -45,9 +45,9 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
     redirect_to root_path
-  else
-    redirect_to post_path
-  end
+    else
+      redirect_to post_path
+    end
   end
 
 
@@ -59,4 +59,6 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :body, :category_id)
   end
+
+  # ERICA: You could eliminate the duplication of `@post = Post.find(params[:id])` in your controller by adding a private method called set_post and adding another before_action that uses it
 end

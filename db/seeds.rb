@@ -14,3 +14,4 @@ Phone no: 6121234321")
 Category.create!(name: "Events")
 Category.create!(name: "Roomate")
 Category.create!(name: "Classified")
+# ERICA: Definitely add categories to your sample posts so you can show off that sweet filtering functionality! Also, if you add seed users and assign user_id's to these posts, your limits on who can edit what should work.

@@ -2,6 +2,7 @@
 <div id="category">
   <% @categories.each do |category| %>
       <p id = "categorycol"><%= link_to category.name, posts_path(filter: {category_id: category}) %></p>
+      <!-- ERICA: Yes!!!!!! -->
   <% end %>
 </div>
 <div id="posts">
