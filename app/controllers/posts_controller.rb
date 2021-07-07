@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-
+  # DRY Good!
   def index
     if (params[:filter])
       category = Category.find(params[:filter][:category_id])
@@ -49,7 +49,7 @@ class PostsController < ApplicationController
     redirect_to post_path
   end
   end
-
+# mismatched indentation
 
   def show
     @post = Post.find(params[:id])
